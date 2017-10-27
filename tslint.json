@@ -1,0 +1,51 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "indent": [
+      true,
+      "tabs"
+    ],
+    "interface-name": [
+      false
+    ],
+    "max-classes-per-file": [
+      false
+    ],
+    "max-line-length": [
+      false
+    ],
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "no-bitwise": false,
+    "no-consecutive-blank-lines": [
+      false
+    ],
+    "no-duplicate-imports": [
+      false
+    ],
+    "no-object-literal-type-assertion": false,
+    "no-submodule-imports": false,
+    "object-literal-sort-keys": [
+      false
+    ],
+    "one-variable-per-declaration": [
+      false
+    ],
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "named-imports-order": "lowercase-last"
+      }
+    ],
+    "trailing-comma": [
+      false
+    ],
+    "variable-name": [
+      true,
+      "allow-leading-underscore"
+    ]
+  }
+}

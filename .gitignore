@@ -1,0 +1,8 @@
+.DS_Store
+*~
+*.log
+.npmrc
+package-lock.json
+coverage/
+dist/
+node_modules/

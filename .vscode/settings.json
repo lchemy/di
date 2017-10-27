@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/typings": true
+  },
+  "vsicons.presets.angular": false,
+  "tslint.enable": true
+}
