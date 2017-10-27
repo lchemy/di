@@ -30,7 +30,10 @@ gulp.task("build:package", () => {
 	})).pipe(gulp.dest("dist"));
 });
 
-gulp.task("build", gulp.parallel(
-	"build:ts",
-	"build:package"
+gulp.task("build", gulp.series(
+	"clean:dist",
+	gulp.parallel(
+		"build:ts",
+		"build:package"
+	)
 ));

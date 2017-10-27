@@ -13,6 +13,8 @@
   "license": "ISC",
   "scripts": {
     "build": "gulp build",
+    "clean": "gulp clean",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
     "test": "gulp test"
   },
   "dependencies": {
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@types/jest": "^21.1.4",
+    "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-typescript": "^3.2.2",
     "jest": "^21.2.1",
