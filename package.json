@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/jest": "^21.1.4",
+    "coveralls": "^3.0.0",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-typescript": "^3.2.2",
