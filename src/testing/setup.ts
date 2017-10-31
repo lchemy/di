@@ -23,5 +23,7 @@ export function setup(overrides: Array<ServiceOverride<any>> = []): Container {
 		bindToContainer(container, provide, use, transient);
 	});
 
+	container.bind(Container).toConstantValue(container);
+
 	return container;
 }

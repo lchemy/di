@@ -1,3 +1,5 @@
+import { Container } from "inversify";
+
 import { container as globalContainer } from "../container";
 import { provide } from "../provide";
 
@@ -72,5 +74,20 @@ describe("setup", () => {
 		expect(bAsASingleton).toEqual(jasmine.any(B));
 		expect(bAsBSingleton).toEqual(jasmine.any(B));
 		expect(bAsASingleton).not.toBe(bAsBSingleton);
+	});
+
+	it("should get itself when injecting container", () => {
+		@provide()
+		class A {
+			constructor(public container: Container) {
+
+			}
+		}
+
+		const localContainer = setup(),
+			a = localContainer.get(A);
+
+		expect(a.container).toBe(localContainer);
+		expect(a.container).not.toBe(globalContainer);
 	});
 });
