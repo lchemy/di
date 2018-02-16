@@ -3,6 +3,7 @@ export {
 	BindingTypeEnum,
 	Container,
 	ContainerModule,
+	LazyServiceIdentifer,
 	METADATA_KEY,
 	MetadataReader,
 	TargetTypeEnum,

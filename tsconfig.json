@@ -8,8 +8,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "strictFunctionTypes": true,
     "noEmit": true,
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "baseUrl": "./src"
   },
   "include": [
     "./src/**/*.ts"

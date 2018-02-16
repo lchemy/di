@@ -3,10 +3,16 @@
   "compilerOptions": {
     "declaration": true,
     "noEmit": false,
-    "outDir": "dist"
+    "rootDir": "",
+    "outDir": "dist",
+
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "isolatedModules": false,
+    "noUnusedParameters": false
   },
   "exclude": [
-    "./src/**/*.spec.ts",
-    "./src/tests/**/*.ts"
+    "./src/tests/**/*.ts",
+    "./src/**/*.spec.ts"
   ]
 }

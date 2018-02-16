@@ -2,12 +2,15 @@ module.exports = () => {
 	return {
 		files: [
 			"tsconfig.json",
-			{ pattern: "src/tests/**/*.ts", instrument: false },
 			"src/**/*.ts",
-			"!src/**/*.spec.ts"
+			"!src/**/*.spec.ts",
+			"!dist/**/*.*"
 		],
 		tests: [
 			"src/**/*.spec.ts"
+		],
+		filesWithNoCoverageCalculated: [
+			"src/tests/**/*.ts"
 		],
 		env: {
 			type: "node",

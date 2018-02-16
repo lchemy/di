@@ -1,14 +1,46 @@
 {
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
+  "editor.renderIndentGuides": false,
+  "editor.renderWhitespace": "boundary",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/.DS_Store": true,
+    "**/coverage": true,
     "**/dist": true,
-    "**/node_modules": true,
-    "**/typings": true,
-    "**/coverage": true
+    "**/node_modules": true
   },
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/coverage/**": true,
+    "**/dist/**": true,
+    "**/node_modules/**": true
+  },
+  "search.exclude": {
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+  "tslint.exclude": [
+    "**/scripts/**/*.js"
+  ],
   "vsicons.presets.angular": false,
-  "tslint.enable": true
+  "TodoParser": {
+    "include": [
+      "ts",
+      "js",
+      "html",
+      "scss"
+    ],
+    "folderExclude": [
+      "node_modules",
+      ".vscode"
+    ],
+    "only": [
+      "src"
+    ]
+  }
 }
