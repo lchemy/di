@@ -1,4 +1,5 @@
 export {
+	AsyncContainerModule,
 	BindingScopeEnum,
 	BindingTypeEnum,
 	Container,

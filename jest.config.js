@@ -6,7 +6,6 @@ module.exports = {
 	moduleFileExtensions: ["ts", "js"],
 	setupTestFrameworkScriptFile: "<rootDir>/src/tests/bootstrap.ts",
 	collectCoverage: true,
-	mapCoverage: true,
 	collectCoverageFrom: [
 		"src/**/*.ts",
 		"!src/**/*.spec.ts",
