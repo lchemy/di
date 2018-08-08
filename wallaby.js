@@ -20,6 +20,7 @@ module.exports = () => {
 		setup: (wallaby) => {
 			const path = require("path");
 			wallaby.testFramework.configure({
+				testEnvironment: "node",
 				setupTestFrameworkScriptFile: path.join(wallaby.projectCacheDir, "src/tests/bootstrap.js")
 			});
 		}

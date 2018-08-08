@@ -51,6 +51,9 @@ function wrapConstructor<C extends interfaces.Newable<any>>(ctor: C): C {
 		}
 	};
 
+	const paramtypes = getDesignParamTypes(ctor);
+	Reflect.defineMetadata("design:paramtypes", paramtypes, wrapped);
+
 	Object.defineProperties(wrapped, {
 		name: {
 			configurable: true,
@@ -58,12 +61,9 @@ function wrapConstructor<C extends interfaces.Newable<any>>(ctor: C): C {
 		},
 		length: {
 			configurable: true,
-			value: ctor.length
+			value: paramtypes != null ? paramtypes.length : 0
 		}
 	});
-
-	const metadata = Reflect.getMetadata("design:paramtypes", ctor);
-	Reflect.defineMetadata("design:paramtypes", metadata, wrapped);
 
 	return wrapped;
 }
@@ -80,4 +80,17 @@ export function bindToContainer(container: Container, serviceIdentifier: interfa
 	} else {
 		binding.inSingletonScope();
 	}
+}
+
+export function getDesignParamTypes<C extends interfaces.Newable<any>>(ctor: C): any[] | undefined {
+	if (ctor.length > 0) {
+		return Reflect.getMetadata("design:paramtypes", ctor);
+	}
+
+	const parentCtor = Object.getPrototypeOf(ctor);
+	if (parentCtor instanceof Function) {
+		return getDesignParamTypes(parentCtor);
+	}
+
+	return [];
 }
