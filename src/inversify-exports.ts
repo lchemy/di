@@ -1,1 +1,29 @@
-export * from "inversify";
+export {
+	AsyncContainerModule,
+	BindingScopeEnum,
+	BindingTypeEnum,
+	Container,
+	ContainerModule,
+	LazyServiceIdentifer,
+	METADATA_KEY,
+	MetadataReader,
+	TargetTypeEnum,
+	decorate,
+	getServiceIdentifierAsString,
+	id,
+	inject,
+	interfaces,
+	multiBindToService,
+	multiInject,
+	named,
+	namedConstraint,
+	optional,
+	postConstruct,
+	tagged,
+	taggedConstraint,
+	targetName,
+	traverseAncerstors,
+	typeConstraint,
+	unmanaged
+} from "inversify";
+
